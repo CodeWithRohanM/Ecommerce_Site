@@ -4,7 +4,9 @@ const HomePage = () =>{
 
     return <>
 
-    <h1>Home Page..</h1>
+    <div className="bg-yellow-300 flex container mx-auto w-full h-full">
+    <h1 className=" w-full text-center">Home Page..</h1>
+    </div>
     
     </>
 };

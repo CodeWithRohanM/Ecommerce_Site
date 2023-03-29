@@ -12,7 +12,7 @@ const NavBar = () => {
 
 
             <a href="/"><img src="/Images/twitter.png" alt="logoIcon" className="w-8 h-8 md:h-10 md:w-10 hover:cursor-pointer hover:scale-110 transition ease-in-out duration-200"></img></a>
-            <div className="flex flex-col gap-y-3 md:flex-row md:gap-x-6 items-center text-md md:text-lg">
+            <div className="flex flex-col gap-y-3 md:flex-row md:gap-x-6 items-center text-md md:text-lg bg-blue-400 px-4 py-2 rounded-lg">
                 <NavLink to="/" style={({ isActive }) => ({
                     color: isActive ? "yellow" : "white",
                 })}><h1 className="hover:cursor-pointer hover:text-yellow-300">Home</h1></NavLink>
@@ -32,7 +32,10 @@ const NavBar = () => {
                 <button type="button" className="bg-blue-400 text-white rounded-lg text-center px-4 py-2 hover:bg-blue-500 hover:cursor-pointer hover:text-cyan-200">LogIn</button>
 
 
-                <img src="/Images/carts.png" className="w-8 h-8 md:w-8 md:h-8 hover:cursor-pointer hover:-translate-y-1 transition ease-in-out duration-200"></img>
+                <NavLink to="/cartPage">
+                    <img src="/Images/carts.png" className="w-8 h-8 md:w-8 md:h-8 hover:cursor-pointer hover:-translate-y-1 transition ease-in-out duration-200 relative"></img>
+                    <span className="absolute -mt-10 ml-6 bg-red-600 rounded-full px-1 text-sm text-center font-bold">5</span>
+                    </NavLink>
             </div>
         </div>
         </div>
