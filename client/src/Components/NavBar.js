@@ -1,40 +1,41 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-// import styled from "styled-components";
-// import tw from "tailwind-styled-components";
 import { useSelector, useDispatch } from "react-redux";
-import { cartNumber, showCartNumber } from "../Actions/userActions";
+import { getCartNumber, getCartStatus } from "../Reducers/userReducer";
+
 
 
 const NavBar = () => {
-    const getCurrentCartNumber = useSelector((state) => state.userReducer.cartNumber);
-    const getCartStatus = useSelector((state) => state.userReducer.cartNumberStatus);
+
+    const getCurrentCartNumber = useSelector((state) => state.rootSlice.cartNumber);
+    const getCurrentCartStatus = useSelector((state) => state.rootSlice.cartStatus);
 
     const dispatch = useDispatch();
+
 
     const [iconImage, setIconImage] = useState("/Images/hamburger.png");
     const [openDoor, setOpenDoor] = useState(false);
 
-    const changeIconImage = () => {
-        try {
-            setIconImage((iconImage) => iconImage === "/Images/hamburger.png" ? "/Images/close.png" : "/Images/hamburger.png");
-            setOpenDoor(!openDoor);
-            let getMenuDisplay = document.getElementById("menuContent").style.display;
+    // const changeIconImage = () => {
+    //     try {
+    //         setIconImage((iconImage) => iconImage === "/Images/hamburger.png" ? "/Images/close.png" : "/Images/hamburger.png");
+    //         setOpenDoor(!openDoor);
+    //         let getMenuDisplay = document.getElementById("menuContent").style.display;
 
-            document.getElementById("menuContent").style.display = getMenuDisplay === "flex" ? "hidden" : "flex";
+    //         document.getElementById("menuContent").style.display = getMenuDisplay === "flex" ? "hidden" : "flex";
 
-        } catch (err) {
-            console.log(err);
-        }
-    }
+    //     } catch (err) {
+    //         console.log(err);
+    //     }
+    // }
 
 
     return <>
 
 
-        <div className="w-screen  bg-blue-600">
+        <div className="w-screen shadow-xl rounded-lg">
 
-            <div className="flex flex-col gap-y-4 items-center md:flex-row md:justify-between text-white font-bold antialiased tracking-widest p-3 md:py-4 container mx-auto md:p-0">
+            <div className="flex flex-col gap-y-4 items-center md:flex-row md:justify-between text-white font-bold antialiased tracking-widest p-3 md:py-4 container mx-auto md:p-0 border-b border-black ">
 
 
 
@@ -49,7 +50,7 @@ const NavBar = () => {
 
 
 
-                <div className="flex flex-col gap-y-3 md:flex-row md:gap-x-6 items-center text-md md:text-lg bg-blue-400 px-4 py-2 rounded-lg w-fit" id="menuContent">
+                <div className="flex flex-col gap-y-3 md:flex-row md:gap-x-8 items-center text-md md:text-lg bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600  px-4 py-2 rounded-lg w-fit" id="menuContent">
                     <NavLink to="/" style={({ isActive }) => ({
                         color: isActive ? "yellow" : "white",
                     })}><h1 className="hover:cursor-pointer hover:text-yellow-300">Home</h1></NavLink>
@@ -71,10 +72,10 @@ const NavBar = () => {
 
                     <NavLink to="/cartPage">
                         <div>
-                            <img src="/Images/carts.png" className="w-8 h-8 md:w-8 md:h-8 hover:cursor-pointer hover:-translate-y-1 transition ease-in-out duration-200 relative" onClick={() => dispatch(showCartNumber(true))}></img>
+                            <img src="/Images/carts.png" className="w-8 h-8 md:w-8 md:h-8 hover:cursor-pointer hover:-translate-y-1 transition ease-in-out duration-200 relative" ></img>
 
                             {
-                                getCartStatus && <span className="absolute -mt-10 ml-6 bg-red-600 rounded-full px-1 text-sm text-center font-bold">{getCurrentCartNumber}</span>
+                                getCurrentCartStatus && <span className="absolute -mt-10 ml-6 bg-red-600 rounded-full px-1 text-sm text-center font-bold">{getCurrentCartNumber}</span>
                             }
                         </div>
 

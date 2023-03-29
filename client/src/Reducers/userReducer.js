@@ -1,28 +1,62 @@
-const initialState = {
-    cartNumber: 0,
-    cartNumberStatus: false,
-};
+import { createSlice } from "@reduxjs/toolkit";
 
-const userReducer = (state = initialState, action) => {
+const userSlice = createSlice({
+    name: "displayCartNumberSlice",
+    initialState: {
+        cartNumber: 0,
+        cartStatus: false,
+    },
+    reducers: {
 
-    switch (action.type) {
-        case "CART_NUMBER": {
+        getCartNumber(state, action) {
             return {
                 ...state,
-                cartNumber: action.payLoad,
+                cartNumber: action.payload,
             }
-        };
+        },
 
-        case "SHOW_CART_NUMBER":{
+        getCartStatus(state, action) {
             return {
                 ...state,
-                cartNumberStatus: action.payLoad,
+                cartStatus: action.payload,
             }
-        }
+        },
+    },
+});
 
-        default: return initialState;
-    }
+export default userSlice.reducer;
+export const { getCartNumber, getCartStatus }  = userSlice.actions;
 
-};
 
-export default userReducer;
+
+
+
+
+// const initialState = {
+//     cartNumber: 0,
+//     cartNumberStatus: false,
+// };
+
+// const userReducer = (state = initialState, action) => {
+
+//     switch (action.type) {
+//         case "CART_NUMBER": {
+//             return {
+//                 ...state,
+//                 cartNumber: action.payLoad,
+//             }
+//         };
+
+//         case "SHOW_CART_NUMBER":{
+//             return {
+//                 ...state,
+//                 cartNumberStatus: action.payLoad,
+//             }
+//         }
+
+//         default: return initialState;
+//     }
+
+// };
+
+// export default userReducer;

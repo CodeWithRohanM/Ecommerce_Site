@@ -13,7 +13,7 @@ const App = () => {
 
   return <>
 
-    <div className="w-screen h-screen bg-cyan-400">
+    <div className="w-screen h-screen">
 
       <NavBar />
 
