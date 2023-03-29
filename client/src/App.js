@@ -24,8 +24,8 @@ const App = () => {
         <Route exact path="/contact" element={<ContactPage />}></Route>
         <Route exact path="/individual/:id" element={<IndividualProduct />}></Route>
         <Route exact path="/cartPage" element={<CartPage />}></Route>
-        <Route path="*" element={<ErrorPage/>}></Route>
-      </Routes> 
+        <Route path="*" element={<ErrorPage />}></Route>
+      </Routes>
 
     </div>
   </>
