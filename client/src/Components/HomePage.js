@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import {cartNumber, showCartNumber} from "../Actions/userActions";
+import { cartNumber, showCartNumber } from "../Actions/userActions";
 import HeroSection from "./HeroSection";
+import MiddleSection from "./MiddleSection";
 
 const HomePage = () => {
 
 
     const getCurrentCartNumber = useSelector((state) => state.userReducer.cartNumber);
-    const getCartStatus = useSelector((state)=> state.userReducer.cartNumberStatus);
+    const getCartStatus = useSelector((state) => state.userReducer.cartNumberStatus);
 
 
     const dispatch = useDispatch();
@@ -19,7 +20,7 @@ const HomePage = () => {
         try {
             await setCurrentCartNumber(currentCartNumber + 1);
             dispatch(showCartNumber(true));
-            dispatch(cartNumber(getCurrentCartNumber+1));
+            dispatch(cartNumber(getCurrentCartNumber + 1));
 
         } catch (err) {
             console.log(err);
@@ -39,10 +40,18 @@ const HomePage = () => {
 
         </div> */}
 
+        <div className="flex flex-col gap-y-8">
+
         <section id="heroSection">
 
-        <HeroSection pageName={"Welcome To Twitter Store"} pageImage = "/Images/storeIcon.png" buttonName = "Shop Now"/>
+            <HeroSection pageName={"Welcome To Twitter Store"} pageImage="/Images/storeIcon.png" buttonName="Shop Now" />
         </section>
+
+        <section id="heroSections" className="w-screen h-screen">
+
+            <MiddleSection/>
+        </section>
+        </div>
 
 
     </>
