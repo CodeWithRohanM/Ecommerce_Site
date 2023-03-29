@@ -1,11 +1,15 @@
 import React from "react";
+import HeroSection from "./HeroSection";
 
-const AboutPage = () =>{
+const AboutPage = () => {
 
     return <>
 
-    <h1>Hey, About Page Here..</h1>
-    
+        <section>
+
+            <HeroSection pageName={"About Us"} pageImage="/Images/aboutUs.png" buttonName="Know More.." />
+        </section>
+
     </>
 };
 
