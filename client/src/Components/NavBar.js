@@ -53,19 +53,23 @@ const NavBar = () => {
                 <div className="flex flex-col gap-y-3 md:flex-row md:gap-x-8 items-center text-md md:text-lg bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600  px-4 py-2 rounded-lg w-fit" id="menuContent">
                     <NavLink to="/" style={({ isActive }) => ({
                         color: isActive ? "yellow" : "white",
-                    })}><h1 className="hover:cursor-pointer hover:text-yellow-300">Home</h1></NavLink>
+                        borderBottom: isActive ? "1px solid black" : "none"
+                    })}><h1 className="hover:cursor-pointer hover:text-yellow-300 hover:border-b hover:border-black transition duration-300">Home</h1></NavLink>
 
                     <NavLink to="/about" style={({ isActive }) => ({
                         color: isActive ? "yellow" : "white",
-                    })}><h1 className="hover:cursor-pointer hover:text-yellow-300">About</h1></NavLink>
+                        borderBottom: isActive ? "1px solid black" : "none",
+                    })}><h1 className="hover:cursor-pointer hover:text-yellow-300 hover:border-b hover:border-black transition-all ease-in-out duration-300">About</h1></NavLink>
 
                     <NavLink to="/products" style={({ isActive }) => ({
                         color: isActive ? "yellow" : "white",
-                    })}><h1 className="hover:cursor-pointer hover:text-yellow-300">Products</h1></NavLink>
+                        borderBottom: isActive ? "1px solid black" : "none",
+                    })}><h1 className="hover:cursor-pointer hover:text-yellow-300 hover:border-b hover:border-black transition-all ease-in-out duration-300">Products</h1></NavLink>
 
                     <NavLink to="/contact" style={({ isActive }) => ({
                         color: isActive ? "yellow" : "white",
-                    })}><h1 className=" hover:cursor-pointer hover:text-yellow-300">Contact</h1></NavLink>
+                        borderBottom: isActive ? "1px solid black" : "none",
+                    })}><h1 className=" hover:cursor-pointer hover:text-yellow-300 hover:border-b hover:border-black transition-all ease-in-out duration-300">Contact</h1></NavLink>
 
                     <button type="button" className="bg-blue-400 text-white rounded-lg text-center px-4 py-2 hover:bg-blue-500 hover:cursor-pointer hover:text-cyan-200">LogIn</button>
 
