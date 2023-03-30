@@ -36,9 +36,9 @@ const ContactPage = () => {
         <div className="w-screen h-screen container mx-auto p-12">
 
             <div className="flex flex-col w-fulll h-full items-center gap-y-10">
-                <h1 className="text-3xl md:text-4xl font-bold">Feel Free To Contatc Us!!</h1>
+                <h1 className="text-3xl md:text-4xl font-bold border-b border-black pb-2 w-3/4 text-center">Feel Free To Contatc Us!!</h1>
 
-                <div className="w-full h-1/2 rounded-lg flex justify-center">
+                <div className="w-full h-1/2 rounded-lg flex justify-center shadow-2xl">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121058.9283656743!2d73.79292695401237!3d18.52476632647583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1680150854653!5m2!1sen!2sin"
                         width="100%"

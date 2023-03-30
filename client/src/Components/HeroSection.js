@@ -5,6 +5,9 @@ import { getCartNumber, getCartStatus } from "../Reducers/userReducer";
 
 const HeroSection = (props) => {
 
+
+
+
     const getCurrentCartNumber = useSelector((state) => state.rootSlice.cartNumber);
     const getCurrentCartStatus = useSelector((state) => state.rootSlice.cartStatus);
 
