@@ -39,7 +39,7 @@ const MiddleSection = () => {
 
                 <div className="flex flex-col gap-y-10 items-center h-full w-full bg-gray-100 container mx-auto md:h-3/4 rounded-lg justify-center">
 
-                    <h1 className="text-2xl border-b border-black pb-2 w-1/2 text-center">Trusted By 1000+ Companies</h1>
+                    <h1 className="text-xl border-b border-black pb-2 w-1/2 text-center">Trusted By 1000+ Companies</h1>
 
 
                     <div className="flex flex-row justify-center container mx-auto h-1/2">
