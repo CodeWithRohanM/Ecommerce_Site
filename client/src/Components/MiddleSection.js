@@ -31,16 +31,16 @@ const MiddleSection = () => {
                     <img src="/Images/cyber.png" className="w-16 h-16 md:w-16 md:h-16"></img>
                     <h1 className="text-xl md:text-xl text-center">Super Secure Payment System</h1>
                 </div>
-
-
-
             </div>
 
-            <div className="mt-12">
 
-                <div className="flex flex-col gap-y-10 items-center h-full w-full">
 
-                    <h1 className="text-2xl">Trusted By 1000+ Companies</h1>
+            <div className="pt-12">
+
+                <div className="flex flex-col gap-y-10 items-center h-full w-full bg-gray-100 container mx-auto md:h-3/4 rounded-lg justify-center">
+
+                    <h1 className="text-2xl border-b border-black pb-2 w-1/2 text-center">Trusted By 1000+ Companies</h1>
+
 
                     <div className="flex flex-row justify-center container mx-auto h-1/2">
 
